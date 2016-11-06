@@ -9,3 +9,8 @@ Authors@R: c(
 Description: Dummy text generator
 License: MIT + file LICENSE
 LazyData: true
+Imports:
+    utils,
+    memoise,
+    assertthat
+RoxygenNote: 5.0.1
