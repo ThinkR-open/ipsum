@@ -1,11 +1,4 @@
----
-output:
-  md_document:
-    variant: markdown_github
----
-
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
 ```{r, echo = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -18,7 +11,11 @@ knitr::opts_chunk$set(
 
 [![Travis-CI Build Status](https://travis-ci.org/purrple/ipsum.svg?branch=master)](https://travis-ci.org/purrple/ipsum)
 
-A sentence contains several words, possibly with some commas. 
+`ipsum` contains some functions to generate dummy text. This is inspired
+from [bacon ipsum](https://baconipsum.com) so several examples used in the package 
+and this file are meaty. 
+
+A sentence starts with a capital letter, contains several words, possibly with some commas and finishes with a dot. 
 
 ```{r}
 sentence(meat)
