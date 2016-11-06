@@ -43,9 +43,11 @@ default_nsentences <- function(){
 #' @param nwords a function with no arguments that returns the number of words for this sentence. should return a number greater than 4. 
 #' @return a sentence
 #' @examples 
+#' \dontrun{
 #' sentence( meat, lorem = TRUE)
 #' sentence( cran_package_names(), lorem = TRUE )
 #' sentence( cran_package_names(), lorem = FALSE )
+#' }
 #' @importFrom assertthat assert_that
 #' @export
 sentence <- function( words, latin = TRUE, lorem = TRUE, nwords = default_nwords) {
@@ -89,8 +91,10 @@ sentence <- function( words, latin = TRUE, lorem = TRUE, nwords = default_nwords
 #' @return a paragraph 
 #' 
 #' @examples 
+#' \dontrun{
 #' paragraph( meat )
 #' paragraph( cran_package_names() )
+#' }
 #' @importFrom utils tail
 #' @importFrom assertthat assert_that
 #' @export

@@ -26,8 +26,10 @@ latin words. The sentence starts with a capital letter
 and ends with a dot.
 }
 \examples{
+\dontrun{
 sentence( meat, lorem = TRUE)
 sentence( cran_package_names(), lorem = TRUE )
 sentence( cran_package_names(), lorem = FALSE )
+}
 }
 

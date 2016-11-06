@@ -25,7 +25,9 @@ a paragraph
 generate a paragraph (between 4 and 7 sentences).
 }
 \examples{
+\dontrun{
 paragraph( meat )
 paragraph( cran_package_names() )
+}
 }
 
