@@ -4,7 +4,7 @@
 \alias{paragraph}
 \title{generate a paragraph of dummy text}
 \usage{
-paragraph(words, latin = TRUE, lorem = FALSE,
+paragraph(words, latin = TRUE, lorem = TRUE,
   nsentences = default_nsentences, nwords = default_nwords)
 }
 \arguments{
@@ -25,6 +25,7 @@ a paragraph
 generate a paragraph (between 4 and 7 sentences).
 }
 \examples{
-paragraph( meat, lorem = TRUE )
+paragraph( meat )
+paragraph( cran_package_names() )
 }
 

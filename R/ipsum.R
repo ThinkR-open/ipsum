@@ -44,9 +44,11 @@ default_nsentences <- function(){
 #' @return a sentence
 #' @examples 
 #' sentence( meat, lorem = TRUE)
+#' sentence( cran_package_names(), lorem = TRUE )
+#' sentence( cran_package_names(), lorem = FALSE )
 #' @importFrom assertthat assert_that
 #' @export
-sentence <- function( words, latin = TRUE, lorem = FALSE, nwords = default_nwords) {
+sentence <- function( words, latin = TRUE, lorem = TRUE, nwords = default_nwords) {
   if(latin){
     # choose at most 50 words to mix with the latin words
     if( length(words) > 50 ){
@@ -87,17 +89,18 @@ sentence <- function( words, latin = TRUE, lorem = FALSE, nwords = default_nword
 #' @return a paragraph 
 #' 
 #' @examples 
-#' paragraph( meat, lorem = TRUE )
+#' paragraph( meat )
+#' paragraph( cran_package_names() )
 #' @importFrom utils tail
 #' @importFrom assertthat assert_that
 #' @export
-paragraph <- function( words, latin = TRUE, lorem = FALSE, nsentences = default_nsentences, nwords = default_nwords ){
-  np <- nparagraphs()
-  assert_that( np > 2 )
+paragraph <- function( words, latin = TRUE, lorem = TRUE, nsentences = default_nsentences, nwords = default_nwords ){
+  ns <- nsentences()
+  assert_that( ns > 2 )
   
-  out <- character(np)
+  out <- character(ns)
   out[1] <- sentence( words, latin = latin, lorem = lorem )
-  out[-1] <- replicate( np-1, sentence(words, latin = latin, lorem = FALSE) )
+  out[-1] <- replicate( ns-1, sentence(words, latin = latin, lorem = FALSE) )
   
   paste( out, collapse = " ")
 }
@@ -114,7 +117,7 @@ paragraph <- function( words, latin = TRUE, lorem = FALSE, nsentences = default_
 #' @param nwords see \code{\link{paragraph}}
 #' @return a character vector of paragraphs. 
 #' @export
-prose <- function( words, n, latin = TRUE, lorem = FALSE, nsentences = default_nsentences, nwords = default_nwords ){
+prose <- function( words, n, latin = TRUE, lorem = TRUE, nsentences = default_nsentences, nwords = default_nwords ){
   out <- character(n)
   out[1] <- paragraph(words, latin = latin, lorem = lorem)
   out[-1] <- replicate( n-1, paragraph(words, latin = latin, lorem = FALSE) )

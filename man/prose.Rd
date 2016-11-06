@@ -4,7 +4,7 @@
 \alias{prose}
 \title{generate some dummy prose}
 \usage{
-prose(words, n, latin = TRUE, lorem = FALSE,
+prose(words, n, latin = TRUE, lorem = TRUE,
   nsentences = default_nsentences, nwords = default_nwords)
 }
 \arguments{

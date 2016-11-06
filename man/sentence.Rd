@@ -4,7 +4,7 @@
 \alias{sentence}
 \title{generate a sentence of dummy words}
 \usage{
-sentence(words, latin = TRUE, lorem = FALSE, nwords = default_nwords)
+sentence(words, latin = TRUE, lorem = TRUE, nwords = default_nwords)
 }
 \arguments{
 \item{words}{custom words to use}
@@ -27,5 +27,7 @@ and ends with a dot.
 }
 \examples{
 sentence( meat, lorem = TRUE)
+sentence( cran_package_names(), lorem = TRUE )
+sentence( cran_package_names(), lorem = FALSE )
 }
 
