@@ -1,0 +1,11 @@
+Package: ipsum
+Type: Package
+Title: Dummy text generator
+Version: 0.1.0
+Authors@R: c(
+    person( "Romain", "Francois", role = c("aut", "cre"), email = "romain@purrple.cat"), 
+    person( "purrple", role = "cph")
+  )
+Description: Dummy text generator
+License: MIT + file LICENSE
+LazyData: true
