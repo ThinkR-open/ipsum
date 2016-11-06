@@ -1,0 +1,41 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# ipsum
+
+[![Travis-CI Build Status](https://travis-ci.org/purrple/ipsum.svg?branch=master)](https://travis-ci.org/purrple/ipsum)
+
+A sentence contains several words, possibly with some commas. 
+
+```{r}
+sentence(meat)
+```
+
+A paragraph contains several sentences. 
+
+```{r}
+paragraph( meat )
+paragraph( cran_package_names() )
+```
+
+Then we can put paragraphs together with `prose`
+
+```{r}
+prose(meat, n = 3)
+prose(cran_package_names(), n = 5)
+```
+
+

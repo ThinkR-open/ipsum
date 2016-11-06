@@ -59,7 +59,7 @@ sentence <- function( words, latin = TRUE, lorem = TRUE, nwords = default_nwords
   } 
   
   n <- nwords()
-  assert_that( n > 4 )
+  assert_that( n >= 4 )
   w <- sample(words, n, replace = FALSE)
   
   if( lorem ){
@@ -84,7 +84,7 @@ sentence <- function( words, latin = TRUE, lorem = TRUE, nwords = default_nwords
 #' @param words custom words to use
 #' @param latin see \code{\link{sentence}}
 #' @param lorem should the first sentence start with "Lorem ipsum dolor amet"
-#' @param nsentences function returning the number of sentences in a paragraph. At least 2. 
+#' @param nsentences function returning the number of sentences in a paragraph. At least 4. 
 #' @param nwords see \code{\link{sentence}}
 #' @return a paragraph 
 #' 
@@ -96,7 +96,7 @@ sentence <- function( words, latin = TRUE, lorem = TRUE, nwords = default_nwords
 #' @export
 paragraph <- function( words, latin = TRUE, lorem = TRUE, nsentences = default_nsentences, nwords = default_nwords ){
   ns <- nsentences()
-  assert_that( ns > 2 )
+  assert_that( ns > 3 )
   
   out <- character(ns)
   out[1] <- sentence( words, latin = latin, lorem = lorem )

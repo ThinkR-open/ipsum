@@ -14,7 +14,7 @@ paragraph(words, latin = TRUE, lorem = TRUE,
 
 \item{lorem}{should the first sentence start with "Lorem ipsum dolor amet"}
 
-\item{nsentences}{function returning the number of sentences in a paragraph. At least 2.}
+\item{nsentences}{function returning the number of sentences in a paragraph. At least 4.}
 
 \item{nwords}{see \code{\link{sentence}}}
 }
