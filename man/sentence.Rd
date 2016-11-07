@@ -4,7 +4,8 @@
 \alias{sentence}
 \title{generate a sentence of dummy words}
 \usage{
-sentence(words, latin = TRUE, lorem = TRUE, nwords = default_nwords)
+sentence(words = NULL, latin = TRUE, lorem = TRUE,
+  nwords = default_nwords)
 }
 \arguments{
 \item{words}{custom words to use}

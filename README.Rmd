@@ -6,9 +6,9 @@ output: github_document
 
 ```{r, echo = FALSE}
 knitr::opts_chunk$set(
+  prompt = TRUE, 
   collapse = TRUE,
-  comment = "#>",
-  fig.path = "README-"
+  comment = ""
 )
 library("ipsum")
 ```
@@ -28,7 +28,6 @@ A sentence starts with a capital letter, contains several words, possibly with s
 
 ```{r}
 sentence(meat)
-sentence(vegs)
 ```
 
 ## paragraph
@@ -36,9 +35,10 @@ sentence(vegs)
 A paragraph contains several sentences. 
 
 ```{r}
-paragraph( meat )
 paragraph( vegs )
-paragraph( c(meat, vegs) )
+```
+
+```{r}
 paragraph( cran_package_names() )
 ```
 
@@ -48,6 +48,14 @@ Then we can put paragraphs together with `prose`
 
 ```{r}
 prose(meat, n = 2)
-prose(vegs, n = 2)
-prose(cran_package_names(), n = 2)
+```
+
+# Printing
+
+`sentence`, `paragraph` and `prose` return simple character vectors with S3 class `ipsum`. 
+The package ships a `print` function that passes parameters to  [stringr::str_wrap](http://stringr.tidyverse.org/reference/str_wrap.html) for formatting : 
+
+```{r}
+recipee <- prose( c(meat, vegs), n = 5)
+print( recipee, indent = 4, exdent = 2 )
 ```

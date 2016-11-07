@@ -14,5 +14,7 @@ Imports:
     memoise,
     assertthat,
     xml2,
-    rvest
+    rvest,
+    magrittr,
+    stringr
 RoxygenNote: 5.0.1

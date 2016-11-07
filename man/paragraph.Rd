@@ -4,7 +4,7 @@
 \alias{paragraph}
 \title{generate a paragraph of dummy text}
 \usage{
-paragraph(words, latin = TRUE, lorem = TRUE,
+paragraph(words = NULL, latin = TRUE, lorem = TRUE,
   nsentences = default_nsentences, nwords = default_nwords)
 }
 \arguments{

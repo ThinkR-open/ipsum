@@ -13,10 +13,8 @@ sentence
 A sentence starts with a capital letter, contains several words, possibly with some commas and finishes with a dot.
 
 ``` r
-sentence(meat)
-#> [1] "Lorem ipsum dolor, amet doner dolore anim fugiat lorem, ipsum tri-tip ad turducken."
-sentence(vegs)
-#> [1] "Lorem ipsum dolor amet tomato pumpkin ad nulla potato, labore cabbage."
+> sentence(meat)
+Lorem ipsum dolor amet meatball bresaola.
 ```
 
 paragraph
@@ -25,14 +23,21 @@ paragraph
 A paragraph contains several sentences.
 
 ``` r
-paragraph( meat )
-#> [1] "Lorem ipsum dolor amet shankle andouille meatball frankfurter, eiusmod laboris. Flank rump in nulla ribeye bresaola, pig tempor enim. Capicola elit ullamco meatloaf burgdoggen cillum beef ribs sed, adipisicing drumstick, venison veniam. Eu laborum consectetur jowl in meatball hamburger, tri-tip qui cillum. Cow ad, jerky fatback aliquip boudin dolore filet mignon sed."
-paragraph( vegs )
-#> [1] "Lorem ipsum dolor amet ex. Cupidatat radish ullamco tomato cucumber leek, anim. Ut eiusmod adipisicing tempor ut enim. Asparagus pepper aliqua elit potato pariatur, id. Lorem laborum ad ipsum irure. Anim voluptate esse non beet, pepper minim ut cauliflower, sunt dolore pea sint est ipsum."
-paragraph( c(meat, vegs) )
-#> [1] "Lorem ipsum dolor amet. Cow broccoli pea carrot, bacon tempor springonion meatloaf. In dolore capicola occaecat biltong sed. Squash irure ad meatball, corn dolore jerky quis laborum springonion. Corn venison prosciutto landjaeger fugiat drumstick."
-paragraph( cran_package_names() )
-#> [1] "Lorem ipsum dolor amet, sudoku deserunt ez lbfgs svUnit rsae, lorem dolor. Proto laborum rUnemploymentData quis, dolore culpa reprehenderit pmr exercitation duis, consequat incididunt. MScombine histogram startupmsg TMB AntAngioCOOL pinnacle.API. Labore scanstatistics qui do id, pariatur ApacheLogProcessor. Kaps incididunt HMM minim excepteur in Rbitcoin, veniam sunt ut, aliqua dolore GPArotation."
+> paragraph( vegs )
+Lorem ipsum dolor amet consectetur squash proident mollit lorem
+veniam, labore in, artichoke sweetpotato. Pariatur ut ea mollit.
+Culpa beetroot occaecat cillum ex. Cupidatat carrot greenbean
+nulla asparagus, do aubergine consequat. Minim commodo eiusmod
+irure.
+```
+
+``` r
+> paragraph( cran_package_names() )
+Lorem ipsum, dolor amet FacPad duis voluptate enim zoib. FAiR esse
+sudokuAlt occaecat IntLik, vembedr qtlDesign sunt irure officia,
+MonoPoly cents. Ex ad cillum rddtools. Incididunt culpa aute
+voluptate consectetur, Rjpstatdb ut. SKAT cupidatat ut tempor
+exercitation proident.
 ```
 
 prose
@@ -41,13 +46,65 @@ prose
 Then we can put paragraphs together with `prose`
 
 ``` r
-prose(meat, n = 2)
-#> [1] "Lorem ipsum dolor amet do mollit capicola velit incididunt, strip steak shoulder dolor kielbasa, non. Ex dolor esse rump beef ribs labore consequat, cupidatat jerky est bacon, tail. In dolor shankle nulla bresaola eu nostrud beef, turkey ut velit. Minim ullamco deserunt eiusmod qui cupidatat, biltong duis, shoulder veniam porchetta corned beef tail. Shankle irure, cillum andouille excepteur ex esse short loin pork kielbasa."
-#> [2] "Dolor shank venison veniam nisi salami aliquip sunt, shankle aute bacon pancetta, corned beef. Cow occaecat spare ribs quis. Lorem qui pancetta tongue ad, ribeye consequat veniam tempor eiusmod deserunt. Incididunt andouille, pastrami nostrud elit consequat beef ribs, chuck rump landjaeger boudin pig."
-prose(vegs, n = 2)
-#> [1] "Lorem ipsum dolor amet deserunt eggplant eu dolore courgette culpa, cupidatat, in pumpkin. Ut esse enim exercitation nulla ullamco. Radish greenonion excepteur do tempor. Excepteur aute tomato minim greenbean pea non ad sunt cupidatat, enim irure magna, ullamco. Consectetur deserunt in est nisi sunt cucumber, qui excepteur, asparagus beet cupidatat."                                                                                                                                        
-#> [2] "Commodo mushroom non, aliquip, est in deserunt veniam esse magna lorem artichoke qui. Beetroot zucchini radish aliquip courgette, onion consectetur incididunt. In anim nulla beetroot bellpepper lettuce fugiat ut, magna cucumber. Commodo lorem consectetur cucumber. Nulla sunt consequat aubergine cauliflower zucchini, Vegetables sweetpotato, ad celery id sint cillum broccoli. Springonion ea cabbage, zucchini est lorem commodo irure, labore duis bellpepper reprehenderit dolor pariatur."
-prose(cran_package_names(), n = 2)
-#> [1] "Lorem ipsum dolor, amet RcmdrPlugin.UCA ROI.plugin.cplex laser ad MeanShift Binarize anim. Commodo sint incididunt, anim fugiat consequat wrassp. Veniam babynames enim esse tsintermittent, GibbsACOV elit nulla. SwissAir eiusmod bayesm fArma isdparser laboris showtextdb qui aplpack, sunt. Velit mmds culpa BioStatR, Tcomp ipsum nulla glmvsd fugiat consectetur. Glm2 gogamer cillum voluptate R.rsp. Ut esse, LotkasLaw consequat deserunt ad aliquip in PCIT."
-#> [2] "Ipsum XR in nisi tempor BCA mollit chopthin write.snns, occaecat. SpTest laboris fugiat ClamR anim icenReg. Duis anim gamlss.util do caroline, EMMIXcontrasts EasyHTMLReport ipsum. VcfR RcppClassicExamples deserunt abodOutlier commodo pcaBootPlot rgeolocate ipsum, Devore7 LDOD, ut enim."
+> prose(meat, n = 2)
+Lorem ipsum dolor amet spare ribs qui, biltong. Veniam t-bone
+voluptate jowl, proident tenderloin, salami strip steak beef
+laborum cow jerky in. Laboris dolore non, pancetta shankle, flank
+beef short loin in ad mollit strip steak landjaeger. Landjaeger
+ham hock jerky in ullamco tri-tip. In lorem veniam shoulder beef
+exercitation magna, t-bone in sed sausage. Duis burgdoggen
+porchetta bresaola nisi turkey, aute.
+Nostrud burgdoggen pork chop, ipsum fatback nulla id. Landjaeger
+incididunt reprehenderit sint burgdoggen. Duis sausage pastrami,
+laboris cupidatat cillum aliqua. Et venison, adipisicing turkey
+drumstick pariatur spare ribs mollit pancetta minim excepteur.
+Beef ribs reprehenderit aute ea, excepteur qui et enim laboris
+minim bacon.
+```
+
+Printing
+========
+
+`sentence`, `paragraph` and `prose` return simple character vectors with S3 class `ipsum`. The package ships a `print` function that passes parameters to [stringr::str\_wrap](http://stringr.tidyverse.org/reference/str_wrap.html) for formatting :
+
+``` r
+> recipee <- prose( c(meat, vegs), n = 5)
+> print( recipee, indent = 4, exdent = 2 )
+    Lorem ipsum dolor amet aliquip. Vegetables hamburger sausage,
+  short ribs, capicola eu meatball dolore pepper minim
+  exercitation pork belly. T-bone aute, hamburger ground round
+  laboris non in labore nostrud boudin quis dolore ex, sirloin. In
+  in cupidatat, springonion spare ribs ham pumpkin short loin.
+  Rump voluptate aliqua tempor, in zucchini ea. Ipsum anim
+  consequat doner in tri-tip, pig eiusmod pork, dolor ea nulla
+  aliqua. Reprehenderit ham anim ad, filet mignon greenbean
+  prosciutto aliqua pumpkin sed culpa, ground round duis biltong.
+    Eu chicken eiusmod, et cucumber andouille, ball tip cillum
+  lettuce radish tempor nostrud aliquip. Ut beef asparagus
+  courgette chicken, dolor consectetur aliquip ut ex. Corn in,
+  anim nulla veniam lettuce dolor kevin. In duis pariatur zucchini
+  elit fugiat officia sausage, consequat, tri-tip consectetur
+  pastrami. Carrot springonion cupidatat corned beef ribeye,
+  deserunt incididunt ipsum mollit hamburger.
+    Duis chicken est aubergine, sint irure excepteur fugiat
+  bresaola ullamco proident, leek. Pumpkin dolor ad shoulder
+  turkey, ut landjaeger officia qui cillum commodo. Ut consectetur
+  corned beef meatball, leberkas adipisicing laborum. Qui nostrud
+  beef ribs, cillum deserunt est ut ex nisi officia tempor, sed.
+  Pig pork loin ut in burgdoggen jowl veniam, andouille filet
+  mignon brisket tempor. Eiusmod qui ea broccoli elit short loin
+  prosciutto, laboris excepteur mushroom shoulder deserunt,
+  aliquip beef ribs.
+    Bresaola brisket meatball pancetta est, sirloin tempor
+  venison. In aute, beef venison aliquip tri-tip sunt et
+  bellpepper commodo nostrud quis ad, hamburger. In irure capicola
+  dolore, ut laborum beetroot. In fatback aliqua turducken, irure
+  veniam nostrud lorem ullamco, sirloin proident elit sint
+  laboris.
+    Brusselssprout enim lorem do non. Springonion consectetur
+  t-bone laboris strip steak aliquip ut, broccoli duis, labore
+  irure sunt. Springonion strip steak ipsum, pork belly culpa id
+  ex cillum pig mushroom. Ad adipisicing rump cupidatat sed
+  Brusselssprout et doner chicken anim, mushroom, biltong. Lorem
+  ut, ipsum pancetta sweetpotato ground round elit.
 ```

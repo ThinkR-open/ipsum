@@ -4,13 +4,13 @@
 \alias{prose}
 \title{generate some dummy prose}
 \usage{
-prose(words, n, latin = TRUE, lorem = TRUE,
+prose(n = 3, words = NULL, latin = TRUE, lorem = TRUE,
   nsentences = default_nsentences, nwords = default_nwords)
 }
 \arguments{
-\item{words}{custom words}
-
 \item{n}{number of paragraphs}
+
+\item{words}{custom words}
 
 \item{latin}{see \code{\link{sentence}}}
 

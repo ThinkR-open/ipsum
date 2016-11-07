@@ -40,15 +40,19 @@ default_nsentences <- function(){
 #' }
 #' @importFrom assertthat assert_that
 #' @export
-sentence <- function( words, latin = TRUE, lorem = TRUE, nwords = default_nwords) {
-  if(latin){
-    # choose at most 50 words to mix with the latin words
-    if( length(words) > 50 ){
-      words <- c( sample(words, 50), filler )
-    } else {
-      words <- c(words, filler)
-    }
-  } 
+sentence <- function( words = NULL, latin = TRUE, lorem = TRUE, nwords = default_nwords) {
+  if( is.null(words) ){
+    words <- filler
+  } else {
+    if(latin){
+      # choose at most 50 words to mix with the latin words
+      if( length(words) > 50 ){
+        words <- c( sample(words, 50), filler )
+      } else {
+        words <- c(words, filler)
+      }
+    } 
+  }
   
   n <- nwords()
   assert_that( n >= 4 )
@@ -66,7 +70,14 @@ sentence <- function( words, latin = TRUE, lorem = TRUE, nwords = default_nwords
   w[commas] <- paste0( w[commas], ",")
   
   out <- paste0( paste( w, collapse = " "), "." )
-  structure( out, class = "sentence" )
+  structure( out, class = "ipsum" )
+}
+
+#' @importFrom stringr str_wrap
+#' @export
+print.ipsum <- function( x, ... ){
+  writeLines( strwrap(x, ...) )
+  invisible()
 }
 
 #' generate a paragraph of dummy text
@@ -88,7 +99,7 @@ sentence <- function( words, latin = TRUE, lorem = TRUE, nwords = default_nwords
 #' @importFrom utils tail
 #' @importFrom assertthat assert_that
 #' @export
-paragraph <- function( words, latin = TRUE, lorem = TRUE, nsentences = default_nsentences, nwords = default_nwords ){
+paragraph <- function( words = NULL, latin = TRUE, lorem = TRUE, nsentences = default_nsentences, nwords = default_nwords ){
   ns <- nsentences()
   assert_that( ns > 3 )
   
@@ -96,26 +107,26 @@ paragraph <- function( words, latin = TRUE, lorem = TRUE, nsentences = default_n
   out[1] <- sentence( words, latin = latin, lorem = lorem )
   out[-1] <- replicate( ns-1, sentence(words, latin = latin, lorem = FALSE) )
   
-  paste( out, collapse = " ")
+  structure( paste( out, collapse = " "), class = "ipsum" )
 }
 
 #' generate some dummy prose
 #' 
 #' generate \code{n} paragraph of dummy prose
 #' 
-#' @param words custom words 
 #' @param n number of paragraphs
+#' @param words custom words 
 #' @param latin see \code{\link{sentence}}
 #' @param lorem should the first paragraph start with "Lorem ipsum dolor amet"
 #' @param nsentences see \code{\link{paragraph}}
 #' @param nwords see \code{\link{paragraph}}
 #' @return a character vector of paragraphs. 
 #' @export
-prose <- function( words, n, latin = TRUE, lorem = TRUE, nsentences = default_nsentences, nwords = default_nwords ){
+prose <- function( n = 3, words = NULL, latin = TRUE, lorem = TRUE, nsentences = default_nsentences, nwords = default_nwords ){
   out <- character(n)
   out[1] <- paragraph(words, latin = latin, lorem = lorem)
   out[-1] <- replicate( n-1, paragraph(words, latin = latin, lorem = FALSE) )
-  out
+  structure( out, class = "ipsum" )
 }
 
 #' names of the packages currently available on cran
@@ -129,5 +140,5 @@ cran_package_names <- memoise(function(){
   row.names( available.packages() ) 
 })
 
-globalVariables(c("meat", "filler", "vegs"))
+globalVariables(c("meat", "filler", "vegs", "."))
 
