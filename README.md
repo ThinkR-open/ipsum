@@ -14,7 +14,7 @@ A sentence starts with a capital letter, contains several words, possibly with s
 
 ``` r
 > sentence(meat)
-Lorem ipsum dolor amet, mollit veniam ipsum shank.
+Lorem ipsum dolor amet, sunt spare ribs irure shank beef.
 ```
 
 paragraph
@@ -24,28 +24,23 @@ A paragraph contains several sentences.
 
 ``` r
 > paragraph( vegs )
-Lorem ipsum dolor amet consectetur. Corn radish eggplant ut sed
-cillum laboris, Brusselssprout fugiat duis do. Celery sunt cillum
-in nisi pumpkin, id voluptate greenbean adipisicing, laboris
-springonion. Fugiat aubergine aliqua artichoke sed asparagus
-excepteur dolor, in in sunt. Potato tempor minim pariatur, mollit
-proident aliquip, qui cupidatat sint lettuce voluptate. Ut
-cupidatat magna sint in aubergine. Artichoke magna laborum
-sweetpotato, pea cabbage Vegetables anim reprehenderit greenbean
-pumpkin, deserunt asparagus.
+Lorem ipsum dolor amet irure Vegetables, anim. Aliquip mollit
+irure ut nisi est. Occaecat in beetroot, reprehenderit dolore
+cauliflower magna velit tempor. Lettuce consequat ut enim occaecat
+dolore. Anim pea Vegetables beet et aute non, veniam incididunt.
 ```
 
 ``` r
 > paragraph( cran_package_names() )
-Lorem ipsum dolor amet nulla mnormpow. Ut excepteur aqp
-NormalLaplace, veniam consequat plotmo minim sunt sperich, aliquip
-oro.pet nat ad eu. FuzzyToolkitUoN deserunt ut, est laGP voluptate
-ullamco anim RSauceLabs. OaPlots oro.dicom dolore, adipisicing non
-mnormt XML2R in MetaheuristicFPA widals. SimComp eu est,
-incididunt nulla esaBcv laborum score sunt episplineDensity, flip
-ullamco. Quis RSNPset mollit voluptate MGLM gamlss.spatial.
-Hkex.api MixGHD GWRM tm exercitation pariatur BayesNI, SpherWave
-gunsales.
+Lorem ipsum dolor amet eiusmod deserunt in, LPStimeSeries pgam.
+MRCV id laboris LowRankQP SetMethods, BurStMisc ut exercitation.
+Pariatur magna, GroupSeq in cupidatat, moveWindSpeed cvTools
+proident irace geomapdata rkafkajars consequat DAKS discreteMTP
+est. In consectetur, statnetWeb googleVis id do
+FinCovRegularization. SocialMediaMineR DiversityOccupancy aliquip
+BinNonNor exercitation ie2misc glrt scmamp ecoretriever QNB,
+tidytext. Rowr PASWR2, MVLM, non ut disclap dcGOR aliqua kamila
+bnormnlr minim ullamco statnet.common reprehenderit velit.
 ```
 
 prose
@@ -55,20 +50,15 @@ Then we can put paragraphs together with `prose`
 
 ``` r
 > prose(meat, n = 2)
-Lorem ipsum, dolor amet, shank doner bacon qui leberkas meatball
-pork belly adipisicing corned beef cow culpa. Mollit ipsum filet
-mignon, ad sausage proident labore shankle anim. Laboris hamburger
-beef ribs culpa dolore corned beef frankfurter andouille, ea
-kielbasa voluptate. Dolore frankfurter ipsum, excepteur nostrud
-tail shankle. Short ribs consectetur tempor tongue in.
-Swine rump pancetta dolor occaecat lorem qui, ex tri-tip tempor,
-pork belly nostrud bacon strip steak. Lorem occaecat spare ribs,
-duis mollit shankle incididunt, meatball aliquip salami flank ut.
-Boudin short loin turkey ullamco cillum in nulla, in id dolore,
-bresaola ham hock beef. Voluptate pancetta pork belly jowl flank,
-aliquip laborum ut in sint. Short ribs quis deserunt, ham hock
-sirloin minim reprehenderit. Proident t-bone adipisicing ut id
-sint.
+Lorem ipsum dolor amet venison, anim commodo. Culpa deserunt anim
+flank leberkas in, commodo corned beef nisi shoulder jerky in, id
+bresaola. Enim occaecat fugiat venison. Ut qui cupidatat mollit
+tempor do. Labore ipsum duis bacon quis t-bone.
+Jowl kielbasa tenderloin pork chop flank. Boudin ham hock ea
+officia ut ullamco nulla, meatloaf prosciutto non ex. Do laboris
+ea excepteur ham hock in, filet mignon flank burgdoggen beef
+veniam. Fatback sirloin spare ribs nulla biltong ham hock pig,
+enim.
 ```
 
 Printing
@@ -78,34 +68,26 @@ Printing
 
 ``` r
 > recipee <- prose( c(meat, vegs), n = 5)
-> print( recipee, indent = 4, exdent = 2 )
-    Lorem ipsum dolor amet. Asparagus cupidatat consectetur
-  pariatur occaecat, adipisicing spare ribs minim. Irure in swine
-  culpa Vegetables, mushroom chuck. Incididunt adipisicing lettuce
-  short ribs duis.
-    Voluptate adipisicing anim beetroot boudin minim duis
-  tenderloin, nulla consequat dolore, doner lorem porchetta.
-  Aliqua sunt ham hock, spare ribs mollit lorem culpa. Ex fugiat
-  pork belly aute prosciutto cucumber, et. Aliquip consectetur
-  landjaeger reprehenderit ball tip. Eggplant cillum lorem,
-  eiusmod greenbean pork loin pepper. Nostrud sweetpotato ad
-  deserunt dolore commodo broccoli, consectetur.
-    Cabbage asparagus sunt turducken fugiat, shank pancetta
-  occaecat. Eiusmod brisket magna tomato aubergine esse. Aute
-  bacon commodo flank in, corned beef jerky cucumber. Culpa nulla,
-  ground round veniam cabbage ad, courgette nostrud dolor quis
-  deserunt ex shoulder laboris.
-    Excepteur ullamco proident esse aute voluptate bellpepper
-  exercitation magna, dolore, pork belly Vegetables shoulder. In
-  asparagus ad, beetroot burgdoggen corn mushroom et greenbean.
-  Aliquip qui, ball tip lorem laboris nisi ut fatback. In
-  incididunt andouille hamburger ex swine exercitation sunt, ut
-  broccoli. Pancetta magna bresaola elit voluptate sirloin, labore
-  do.
-    Venison anim, voluptate turkey greenonion enim nostrud
-  cupidatat proident ut excepteur eiusmod, frankfurter officia.
-  Duis exercitation mushroom non pork chop. Dolore ipsum voluptate
-  non eu culpa, excepteur cabbage do mollit adipisicing. Short
-  ribs occaecat bacon ea, nostrud flank tempor pastrami ham hock.
-  Pig elit flank mollit.
+> print( recipee, indent = 4, exdent = 2, width = 100 )
+    Lorem ipsum dolor amet anim aliqua, pea jerky. Turducken short ribs est in sed quis radish,
+  dolor cillum. Lorem kevin tempor potato laborum. Exercitation enim capicola tempor pork.
+    Exercitation celery drumstick, magna turducken aute veniam. Beet qui minim beef ribs
+  Brusselssprout, onion, pea et landjaeger doner sint beef sweetpotato nisi. Jowl laborum lorem do
+  ut minim, venison in Brusselssprout tail. Turkey jerky dolor short ribs, cow velit laborum.
+  Beetroot in ad pig minim deserunt, incididunt leek anim cillum non. Leberkas magna meatball pig,
+  mollit turducken eu, irure courgette artichoke exercitation minim.
+    Brusselssprout aubergine aliqua porchetta asparagus, voluptate ullamco in nisi doner pork loin.
+  Bresaola nostrud nulla sint tempor pumpkin. Ad meatball nulla, veniam et lettuce pork ground
+  round enim nisi reprehenderit asparagus, broccoli meatloaf. Ullamco magna frankfurter officia
+  short loin occaecat, sunt boudin aute t-bone broccoli.
+    Dolor pariatur lorem in spare ribs consectetur. Pig tempor elit pork belly dolore pumpkin,
+  shankle. Anim voluptate prosciutto aubergine doner aute fugiat excepteur zucchini, in, dolor
+  radish. Pepper ham hock et occaecat, ground round, chicken tomato strip steak velit quis nostrud
+  magna do. Corned beef pork belly non shankle tri-tip nostrud pork nulla, velit consequat,
+  leberkas commodo.
+    Deserunt et cillum, excepteur corned beef, nisi officia sed pork belly burgdoggen occaecat
+  courgette rump asparagus elit. Prosciutto magna fugiat mushroom incididunt, cucumber chicken
+  ipsum duis. Voluptate jerky pariatur, doner reprehenderit incididunt ex sed adipisicing. Ham hock
+  ball tip anim id broccoli chicken. Cucumber ham hock beef ribs consectetur, ut meatloaf tail ut.
+  Chicken eiusmod laborum t-bone filet mignon ut aliqua do artichoke ground round, tempor.
 ```

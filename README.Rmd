@@ -57,5 +57,5 @@ The package ships a `print` function that passes parameters to  [stringr::str_wr
 
 ```{r}
 recipee <- prose( c(meat, vegs), n = 5)
-print( recipee, indent = 4, exdent = 2 )
+print( recipee, indent = 4, exdent = 2, width = 100 )
 ```
