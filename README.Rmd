@@ -1,10 +1,16 @@
+---
+output: github_document
+---
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
 ```{r, echo = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "README-"
 )
+library("ipsum")
 ```
 
 # ipsum
@@ -13,26 +19,35 @@ knitr::opts_chunk$set(
 
 `ipsum` contains some functions to generate dummy text. This is inspired
 from [bacon ipsum](https://baconipsum.com) so several examples used in the package 
-and this file are meaty. 
+and this file are meaty. To balance things, there are also examples using vegetables
+and cran package names. 
+
+## sentence
 
 A sentence starts with a capital letter, contains several words, possibly with some commas and finishes with a dot. 
 
 ```{r}
 sentence(meat)
+sentence(vegs)
 ```
+
+## paragraph
 
 A paragraph contains several sentences. 
 
 ```{r}
 paragraph( meat )
+paragraph( vegs )
+paragraph( c(meat, vegs) )
 paragraph( cran_package_names() )
 ```
+
+## prose
 
 Then we can put paragraphs together with `prose`
 
 ```{r}
-prose(meat, n = 3)
-prose(cran_package_names(), n = 5)
+prose(meat, n = 2)
+prose(vegs, n = 2)
+prose(cran_package_names(), n = 2)
 ```
-
-

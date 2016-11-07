@@ -1,14 +1,4 @@
 
-#' Filler words
-#' @format character vector
-#' @rdname words
-"filler"
-
-#' Meat words
-#' @format character vector
-#' @rdname words
-"meat"
-
 #' default specification of the number of words in a sentence
 #' 
 #' by default a sentence contains between 4 and 15 words. 
@@ -75,8 +65,8 @@ sentence <- function( words, latin = TRUE, lorem = TRUE, nwords = default_nwords
   commas <- sample( 2:(n-1), size = (n-2) / 5 )
   w[commas] <- paste0( w[commas], ",")
   
-  paste0( paste( w, collapse = " "), "." )
-  
+  out <- paste0( paste( w, collapse = " "), "." )
+  structure( out, class = "sentence" )
 }
 
 #' generate a paragraph of dummy text
@@ -139,5 +129,5 @@ cran_package_names <- memoise(function(){
   row.names( available.packages() ) 
 })
 
-globalVariables(c("meat", "filler"))
+globalVariables(c("meat", "filler", "vegs"))
 

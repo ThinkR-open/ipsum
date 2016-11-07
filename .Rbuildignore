@@ -2,3 +2,5 @@
 ^\.Rproj\.user$
 ^\.travis\.yml$
 README.Rmd
+^README\.Rmd$
+^README-.*\.png$

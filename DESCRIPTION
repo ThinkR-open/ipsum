@@ -12,5 +12,7 @@ LazyData: true
 Imports:
     utils,
     memoise,
-    assertthat
+    assertthat,
+    xml2,
+    rvest
 RoxygenNote: 5.0.1
