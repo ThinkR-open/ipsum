@@ -2,6 +2,7 @@
 % Please edit documentation in R/datagen.R
 \docType{data}
 \name{filler}
+\alias{cat_breeds}
 \alias{filler}
 \alias{meat}
 \alias{vegs}
@@ -13,6 +14,8 @@ filler
 meat
 
 vegs
+
+cat_breeds
 }
 \description{
 Filler words
@@ -20,6 +23,8 @@ Filler words
 Meat words
 
 Vegetables words
+
+Cat breeds
 }
 \keyword{datasets}
 

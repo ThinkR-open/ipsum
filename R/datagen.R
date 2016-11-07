@@ -13,6 +13,21 @@ get_vegetables <- function(){
     gsub( "[^[:alpha:]]", "", . )
 }
 
+#' Get a list of cat breeds 
+#' 
+#' @source \url{http://purrfectcatbreeds.com/cat-breeds-list-with-pictures/}
+#' @importFrom xml2 read_html
+#' @importFrom rvest html_nodes html_text
+#' @importFrom magrittr %>%
+#' @export
+get_cat_breeds <- function(){
+  read_html("http://purrfectcatbreeds.com/cat-breeds-list-with-pictures/") %>% 
+    html_nodes(".post h1") %>% 
+    html_text() %>% 
+    tolower()
+}
+
+
 #' Filler words
 #' @format character vector
 #' @rdname words
@@ -27,3 +42,9 @@ get_vegetables <- function(){
 #' @format character vector
 #' @rdname words
 "vegs"
+
+#' Cat breeds
+#' @format character vector
+#' @rdname words
+"cat_breeds"
+

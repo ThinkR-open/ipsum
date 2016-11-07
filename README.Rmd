@@ -20,7 +20,7 @@ library("ipsum")
 `ipsum` contains some functions to generate dummy text. This is inspired
 from [bacon ipsum](https://baconipsum.com) so several examples used in the package 
 and this file are meaty. To balance things, there are also examples using vegetables
-and cran package names. 
+and cran package names and of course cat breeds. 
 
 ## sentence
 
@@ -47,7 +47,7 @@ paragraph( cran_package_names() )
 Then we can put paragraphs together with `prose`
 
 ```{r}
-prose(meat, n = 2)
+prose( cat_breeds , n = 4)
 ```
 
 # Printing
@@ -59,3 +59,6 @@ The package ships a `print` function that passes parameters to  [stringr::str_wr
 recipee <- prose( c(meat, vegs), n = 5)
 print( recipee, indent = 4, exdent = 2, width = 100 )
 ```
+
+
+
